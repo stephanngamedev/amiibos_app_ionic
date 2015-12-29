@@ -34,12 +34,25 @@
 	<script src="js/amiibo/amiibo.controller.js"></script>
 </head>
 <body ng-app="amiibosApp">
-	<div class="bar bar-header">
-		<h1 class="title">Amiibos</h1>
-	</div>
-	<ion-content class="has-header">
+	<ion-side-menus>
+		<ion-side-menu side="left">
+			<div ng-include src="'side-menu.html'"></div>
+		</ion-side-menu>
 
-		<div ng-view></div>
-	</ion-content>
+		<ion-side-menu-content>
+			<ion-nav-bar>
+				<ion-nav-back-button class="button-clear">
+					<i class="ion-arrow-left-c"></i> Back
+				</ion-nav-back-button>
+
+				<ion-nav-buttons side="left">
+					<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+				</ion-nav-buttons>
+			</ion-nav-bar>
+			
+			<ion-nav-view></ion-nav-view>
+		
+		</ion-side-menu-content>
+	</ion-side-menus>
 </body>
 </html>

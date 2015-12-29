@@ -19,7 +19,8 @@ angular
 			}
 			
 			if(window.StatusBar) {
-				StatusBar.styleDefault();
+				StatusBar.styleLightContent();
+				StatusBar.overlaysWebView(true);
 			}
 		});
 	});

@@ -1,17 +1,21 @@
 /* Empty. Add your own CSS if you like */
-body {
+.pane {
 	font-family: 'latoregular', sans-serif;
-	background-color: #f5f5f5
+	background-color: #f5f5f5 !important;
 }
 
-.bar {
-	background-color: #009beb;
+ion-header-bar.bar.bar-header {
+	background-color: #009beb !important;
 }
 
 .bar .title {
 	font-family: 'latobold', sans-serif;
-	font-size: 20px;
+	font-size: 22px;
 	color: #ffffff;
+}
+
+button.button {
+	color: #ffffff !important;
 }
 .list-inset {
 	margin: 15px 10px;
@@ -19,4 +23,26 @@ body {
 
 .card{
 	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); 
+}
+/* Amiibo details */
+.amiibo-detail h2 {
+	color: #009beb;
+	font-family: 'latobold', sans-serif;
+	font-size: 18px;
+}
+
+.amiibo-detail p {
+	font-family: 'latoregular', sans-serif;
+}
+
+/* SIDE MENU */
+ion-content.side-menu{
+	background-color: #333333;
+}
+
+div.list.side-menu a {
+	background-color: #333333;
+	border-color: #444444;
+	color: #ffffff;
+
 }

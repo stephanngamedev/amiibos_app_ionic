@@ -1,32 +1,35 @@
-<div class="list list-inset">
-  <label class="item item-input">
-    <i class="icon ion-ios-search-strong placeholder-icon"></i>
-    <input type="text" placeholder="Search" ng-model="vm.searchField">
-  </label>
-</div>
-
-<div class="list list-inset">
-	<label class="item item-input item-select">
-		<div class="input-label">
-			Order By:
+<ion-view view-title="Amiibos">
+    <ion-content>
+		<div class="list list-inset">
+			<label class="item item-input">
+				<i class="icon ion-ios-search-strong placeholder-icon"></i>
+				<input type="text" placeholder="Search" ng-model="vm.searchField">
+			</label>
 		</div>
-		<select ng-model="vm.orderByField">
-			<option value="-release_date" selected="true">Release Date</option>
-			<option value="name">Name</option>
-		</select>
-	</label>
-</div>
 
-<div class="list">
-	<div class="row" ng-repeat="amiibos in vm.amiibos 
-		| filter: { name: vm.searchField } 
-		| orderBy: vm.orderByField
-		| chunkBy: 4" >
-		<div class="col-25" ng-repeat="amiibo in amiibos">
-			<a ng-href="#/amiibo/{{amiibo.id}}">
-				<img ng-src="/img/amiibos/{{amiibo.id}}.png" width="100%">
-			</a>
+		<div class="list list-inset">
+			<label class="item item-input item-select">
+				<div class="input-label">
+					Order By:
+				</div>
+				<select ng-model="vm.orderByField">
+					<option value="-release_date" selected="true">Release Date</option>
+					<option value="name">Name</option>
+				</select>
+			</label>
 		</div>
-	</div>	
-</div>
 
+		<div class="list">
+			<div class="row" ng-repeat="amiibos in vm.amiibos 
+			| filter: { name: vm.searchField } 
+			| orderBy: vm.orderByField
+			| chunkBy: 4" >
+				<div class="col-25" ng-repeat="amiibo in amiibos">
+					<a ng-href="#/amiibo/{{amiibo.id}}">
+						<img ng-src="/img/amiibos/{{amiibo.id}}.png" width="100%">
+					</a>
+				</div>
+			</div>	
+		</div>
+	</ion-content>
+</ion-view>

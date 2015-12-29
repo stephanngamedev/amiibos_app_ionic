@@ -5,24 +5,24 @@
 		.module('amiibosApp')
 		.config(config);
 
-	config.$inject = ['$routeProvider'];
+	config.$inject = ['$stateProvider', '$urlRouterProvider'];
 	
-	function config( $routeProvider ) {
-		$routeProvider
-			.when('/amiibos', {
+	function config( $stateProvider, $urlRouterProvider ) {
+		$stateProvider
+			.state('amiibos', {
+				url: '/amiibos',
 				templateUrl: 'js/amiibos/amiibos.html',
 				controller: 'AmiibosController',
 				controllerAs: 'vm'
-			});
-
-		$routeProvider
-			.when('/amiibo/:id', {
+			})
+			
+			.state('amiibo', {
+				url: '/amiibo/:id',
 				templateUrl: 'js/amiibo/amiibo.html',
 				controller: 'AmiiboController',
 				controllerAs: 'vm'
 			});
 
-		$routeProvider
-			.otherwise({ redirectTo: 'amiibos' });
+		$urlRouterProvider.otherwise('/amiibos');
 	}
 })();

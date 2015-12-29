@@ -5,13 +5,13 @@
 		.module('amiibosApp')
 		.controller('AmiiboController', AmiiboController);
 
-	AmiiboController.$inject = ['AmiibosFactory', '$routeParams'];
+	AmiiboController.$inject = ['AmiibosFactory', '$stateParams'];
 
-	function AmiiboController( AmiibosFactory, $routeParams ) { 
+	function AmiiboController( AmiibosFactory, $stateParams ) { 
 		var vm = this;
 		vm.amiibos = [];
 		
-		getAmiibo( $routeParams.id );
+		getAmiibo( $stateParams.id );
 
 		function getAmiibo( amiiboId ) {
 			AmiibosFactory.get( {id: amiiboId },
