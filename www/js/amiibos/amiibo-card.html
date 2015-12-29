@@ -1,0 +1,15 @@
+<div class="card amiibo-card">
+	<div class="item card-header">
+		<h2>{{amiibo.name}}</h2>
+		<p ng-if="amiibo.series.name">{{amiibo.series.name}} series</p>
+		<p>Release date: {{amiibo.release_date}}</p>
+	</div>
+
+	<div class="item item-image">
+		<img ng-src="/img/amiibos/{{amiibo.id}}.png">
+	</div>
+
+	<a class="item item-icon-left card-action" ng-href="#/amiibo/{{amiibo.id}}">
+		<i class="icon ion-more"></i> More details
+    </a>
+</div>

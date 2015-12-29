@@ -1,1 +1,22 @@
 /* Empty. Add your own CSS if you like */
+body {
+	font-family: 'latoregular', sans-serif;
+	background-color: #f5f5f5
+}
+
+.bar {
+	background-color: #009beb;
+}
+
+.bar .title {
+	font-family: 'latobold', sans-serif;
+	font-size: 20px;
+	color: #ffffff;
+}
+.list-inset {
+	margin: 15px 10px;
+}
+
+.card{
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); 
+}
