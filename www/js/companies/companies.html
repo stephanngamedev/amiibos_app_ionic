@@ -1,0 +1,12 @@
+<ion-view view-title="Companies">
+	<ion-content>
+		<ul class="list">
+			<a class="item item-icon-right" 
+				ng-repeat="company in vm.companies | orderBy: 'name'" 
+				href="#/companies/{{company.id}}">
+				 <i class="icon ion-ios-arrow-forward"></i>
+				{{company.name}}
+			</a>
+		</ul>
+	</ion-content>
+</ion-view>

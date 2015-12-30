@@ -35,6 +35,20 @@
 				templateUrl: 'js/series-details/series-details.html',
 				controller: 'SeriesDetailsController',
 				controllerAs: 'vm'
+			})
+
+			.state('companies', {
+				url: '/companies',
+				templateUrl: 'js/companies/companies.html',
+				controller: 'CompaniesController',
+				controllerAs: 'vm'
+			})
+
+			.state('companyDetails', {
+				url: '/companies/:id',
+				templateUrl: 'js/company-details/company-details.html',
+				controller: 'CompanyDetailsController',
+				controllerAs: 'vm'
 			});
 
 		$urlRouterProvider.otherwise('/amiibos');

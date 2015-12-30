@@ -1,7 +1,10 @@
 <ion-view view-title="Series">
 	<ion-content>
 		<ul class="list">
-			<a class="item" ng-repeat="series in vm.series | orderBy: 'name'" href="#/series/{{series.id}}">
+			<a class="item item-icon-right" 
+				ng-repeat="series in vm.series | orderBy: 'name'" 
+				ui-sref="seriesDetails({ id: series.id })">
+				<i class="icon ion-ios-arrow-forward"></i>
 				{{series.name}}
 			</a>
 		</ul>

@@ -1,0 +1,28 @@
+<ion-view cache-view="false">
+	<ion-nav-title> {{vm.company.name}} </ion-nav-title>
+	<ion-content>
+		<div class="list card card-detail">
+			<div class="item">
+				<h2>{{vm.company.name}}</h2>
+				<p>
+					<ng-pluralize count="vm.company.amiibos.length" when="{
+						'one': '1 Amiibo',
+						'other': '{} Amiibos'
+					}"></ng-pluralize>
+				</p>
+			</div>
+			
+			<div class="item item-body" >
+				<div class="row" ng-repeat="amiibos in vm.company.amiibos 
+					| orderBy: '-release_date'
+					| chunkBy: 3" >
+					<div class="col-33" ng-repeat="amiibo in amiibos">
+						<a ui-sref="amiiboDetails({ id: amiibo.id })">
+							<img ng-src="/img/amiibos/{{amiibo.id}}.png" width="100%">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
