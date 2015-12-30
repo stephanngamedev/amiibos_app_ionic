@@ -15,6 +15,7 @@ ion-header-bar.bar.bar-header {
 }
 
 button.button {
+	font-family: 'latoregular', sans-serif;
 	color: #ffffff !important;
 }
 .list-inset {
@@ -25,17 +26,22 @@ button.button {
 	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); 
 }
 /* Amiibo details */
-.amiibo-detail h2 {
+.card-detail h2 {
 	color: #009beb;
 	font-family: 'latobold', sans-serif;
 	font-size: 18px;
 }
 
-.amiibo-detail p {
+.card-detail p {
 	font-family: 'latoregular', sans-serif;
 }
 
 /* SIDE MENU */
+.side-menu.bar.bar-header{
+	border-color: #000000;
+}
+
+
 ion-content.side-menu{
 	background-color: #333333;
 }
@@ -44,5 +50,5 @@ div.list.side-menu a {
 	background-color: #333333;
 	border-color: #444444;
 	color: #ffffff;
-
+	font-family: 'latoregular', sans-serif;
 }

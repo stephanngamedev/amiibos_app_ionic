@@ -9,7 +9,7 @@
 
 	function AmiiboController( AmiibosFactory, $stateParams ) { 
 		var vm = this;
-		vm.amiibos = [];
+		vm.amiibo = {};
 		
 		getAmiibo( $stateParams.id );
 

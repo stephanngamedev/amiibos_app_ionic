@@ -1,0 +1,9 @@
+<ion-view view-title="Series">
+	<ion-content>
+		<ul class="list">
+			<a class="item" ng-repeat="series in vm.series | orderBy: 'name'" href="#/series/{{series.id}}">
+				{{series.name}}
+			</a>
+		</ul>
+	</ion-content>
+</ion-view>
