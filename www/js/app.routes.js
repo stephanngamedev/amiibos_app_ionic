@@ -16,10 +16,10 @@
 				controllerAs: 'vm'
 			})
 			
-			.state('amiibo', {
-				url: '/amiibo/:id',
-				templateUrl: 'js/amiibo/amiibo.html',
-				controller: 'AmiiboController',
+			.state('amiiboDetails', {
+				url: '/amiibos/:id',
+				templateUrl: 'js/amiibo-details/amiibo-details.html',
+				controller: 'AmiiboDetailsController',
 				controllerAs: 'vm'
 			})
 
@@ -30,10 +30,10 @@
 				controllerAs: 'vm'
 			})
 
-			.state('single_series', {
+			.state('seriesDetails', {
 				url: '/series/:id',
-				templateUrl: 'js/single-series/single-series.html',
-				controller: 'SingleSeriesController',
+				templateUrl: 'js/series-details/series-details.html',
+				controller: 'SeriesDetailsController',
 				controllerAs: 'vm'
 			});
 

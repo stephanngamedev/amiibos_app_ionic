@@ -3,11 +3,11 @@
 
 	angular
 		.module('amiibosApp')
-		.controller('SingleSeriesController', SingleSeriesController);
+		.controller('SeriesDetailsController', SeriesDetailsController);
 
-	SingleSeriesController.$inject = ['SeriesFactory', '$stateParams'];
+	SeriesDetailsController.$inject = ['SeriesFactory', '$stateParams'];
 
-	function SingleSeriesController( SeriesFactory, $stateParams ) { 
+	function SeriesDetailsController( SeriesFactory, $stateParams ) { 
 		var vm = this;
 		vm.series = {};
 		

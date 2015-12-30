@@ -3,11 +3,11 @@
 
 	angular
 		.module('amiibosApp')
-		.controller('AmiiboController', AmiiboController);
+		.controller('AmiiboDetailsController', AmiiboDetailsController);
 
-	AmiiboController.$inject = ['AmiibosFactory', '$stateParams'];
+	AmiiboDetailsController.$inject = ['AmiibosFactory', '$stateParams'];
 
-	function AmiiboController( AmiibosFactory, $stateParams ) { 
+	function AmiiboDetailsController( AmiibosFactory, $stateParams ) { 
 		var vm = this;
 		vm.amiibo = {};
 		
