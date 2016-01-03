@@ -8,6 +8,6 @@
 	SeriesFactory.$inject = ['$resource'];
 
 	function SeriesFactory( $resource ) { 
-		return $resource('http://localhost:3000/series/:id');
+		return $resource('http://192.168.0.3:3000/series/:id');
 	};
 })();

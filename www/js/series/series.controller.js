@@ -10,7 +10,7 @@
 	function SeriesController( SeriesFactory ) { 
 		var vm = this;
 		vm.series = [];
-
+		
 		getSeries();
 
 		function getSeries() {

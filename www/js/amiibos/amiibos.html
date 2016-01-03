@@ -18,18 +18,18 @@
 				</select>
 			</label>
 		</div>
-
-		<div class="list">
-			<div class="row" ng-repeat="amiibos in vm.amiibos 
-			| filter: { name: vm.searchField } 
-			| orderBy: vm.orderByField
-			| chunkBy: 4" >
-				<div class="col-25" ng-repeat="amiibo in amiibos">
-					<a ui-sref="amiiboDetails({ id: amiibo.id })">
-						<img ng-src="/img/amiibos/{{amiibo.id}}.png" width="100%">
-					</a>
-				</div>
+		<div class="grid-container" ng-cloak>
+			<div class="amiibo-container grid-33 mobile-grid-33" ng-repeat="amiibo in vm.amiibos
+					| filter: { name: vm.searchField } 
+					| orderBy: vm.orderByField" >
+				
+				<img ng-src="/img/amiibos/{{amiibo.id}}.png" 
+					on-tap="vm.goToDetails( amiibo );"
+					on-hold="vm.checkmark( amiibo );" 
+					width="100%">
+				
+				<i class="icon ion-checkmark-circled" ng-if="vm.collection.get( amiibo.id )"></i>	
 			</div>	
-		</div>
+		</div>	
 	</ion-content>
 </ion-view>

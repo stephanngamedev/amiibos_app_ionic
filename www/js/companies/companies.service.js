@@ -8,6 +8,6 @@
 	CompaniesFactory.$inject = ['$resource'];
 
 	function CompaniesFactory( $resource ) { 
-		return $resource('http://localhost:3000/companies/:id');
+		return $resource('http://192.168.0.3:3000/companies/:id');
 	};
 })();

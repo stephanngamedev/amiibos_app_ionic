@@ -25,6 +25,24 @@ button.button {
 .card{
 	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); 
 }
+
+.amiibo-container {
+	position: relative;
+}
+
+.amiibo-container i {
+	color: #00EF6F;
+	opacity: .7;
+	font-size: 22px;
+	position: absolute;
+	bottom: 15%;
+	right: 25%;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 /* Amiibo details */
 .card-detail h2 {
 	color: #009beb;

@@ -5,14 +5,17 @@
 		.module('amiibosApp')
 		.controller('AmiibosController', AmiibosController);
 
-	AmiibosController.$inject = ['AmiibosFactory'];
+	AmiibosController.$inject = ['AmiibosFactory', '$state', 'localStorageService'];
 
-	function AmiibosController( AmiibosFactory ) { 
+	function AmiibosController( AmiibosFactory, $state, localStorageService ) { 
 		var vm = this;
 		vm.amiibos = [];
 		vm.searchField = '';
 		vm.orderByField = '-release_date';
-
+		vm.checkmark = checkmark;
+		vm.goToDetails = goToDetails;
+		vm.collection = localStorageService;
+		
 		getAmiibos();
 
 		function getAmiibos() {
@@ -29,6 +32,13 @@
 			function getAmiibosFailed( error ) {
 				console.log( error );
 			};
+		};
+
+		function goToDetails( amiibo ) {
+			$state.go('amiiboDetails', {id: amiibo.id})
+		}
+		function checkmark( amiibo ) {
+			localStorageService.set( amiibo.id, !localStorageService.get(amiibo.id));
 		};
 	};
 })();
