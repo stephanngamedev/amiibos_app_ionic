@@ -5,9 +5,9 @@
 		.module('amiibosApp')
 		.factory('CompaniesFactory', CompaniesFactory);
 
-	CompaniesFactory.$inject = ['$resource'];
+	CompaniesFactory.$inject = ['$resource', 'apiHost' ];
 
-	function CompaniesFactory( $resource ) { 
-		return $resource('http://192.168.0.3:3000/companies/:id');
+	function CompaniesFactory( $resource, apiHost ) { 
+		return $resource( apiHost + '/companies/:id' );
 	};
 })();
